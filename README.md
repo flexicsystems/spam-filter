@@ -19,6 +19,9 @@ If the input contain a pattern it will rate as spam .
 The Whitelist Filter is build to check if the input contains any whitelisted patterns. 
 If no whitelisted pattern contained the input will rate as spam.
 
+### Url Filter
+The URL Filter is build to match if the input contains url's.
+
 Example
 -------
 ---
