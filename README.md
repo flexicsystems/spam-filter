@@ -79,6 +79,16 @@ Pay attention to the following behavior of the `check` function:
 
 * Return `true` if spam is detected in input.
 * Return `false` if no spam is detected in input.
+ 
+Exceptions
+----------
+---
+
+You can control how the Spam Filter react if an exception is thrown.
+The value of `$responseOnException` is equivalent to the filter results.
+
+If you want that the Spam Filter defines an input as Spam if an exception is thrown set this value to `true`.
+
 
 Changelog
 ---------

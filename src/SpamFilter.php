@@ -16,12 +16,15 @@ final class SpamFilter
 {
     private array $filter;
 
+    private bool $responseOnException;
+
     /**
      * @param array<int, FilterInterface> $filter
      */
-    public function __construct(array $filter = [])
+    public function __construct(array $filter = [], bool $responseOnException = false)
     {
         $this->filter = $filter;
+        $this->responseOnException = $responseOnException;
     }
 
     /**
@@ -30,8 +33,12 @@ final class SpamFilter
     public function check($input): bool
     {
         foreach ($this->filter as $filter) {
-            if ($filter->check($input)) {
-                return true;
+            try {
+                if ($filter->check($input)) {
+                    return true;
+                }
+            } catch (\Exception $exception) {
+                return $this->responseOnException;
             }
         }
 
