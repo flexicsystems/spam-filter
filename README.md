@@ -5,7 +5,6 @@ The Spam-Filter package defines an object-oriented layer for checking strings ab
 
 Build-in Filter Types
 ---------------------
----
 
 ### Regex Filter
 The Regex Filter is build to match Spam by an array of Regex patterns.
@@ -29,7 +28,6 @@ Warning: For larger text this filter performs a lot of operations.
 
 Example
 -------
----
 ```php
 $spamFilter = new \ThemePoint\SpamFilter\SpamFilter([
     new \ThemePoint\SpamFilter\Filter\BlacklistFilter([
@@ -52,7 +50,6 @@ $spamFilter->check(
 
 Create custom filter
 -----------------
----
 
 The Spam-Filter supports the creation of custom filters.
 The Custom-Filters must implement the `\ThemePoint\SpamFilter\Filter\FilterInterface` with it's defined functions.
@@ -82,7 +79,6 @@ Pay attention to the following behavior of the `check` function:
  
 Exceptions
 ----------
----
 
 You can control how the Spam Filter react if an exception is thrown.
 The value of `$responseOnException` is equivalent to the filter results.
@@ -92,7 +88,6 @@ If you want that the Spam Filter defines an input as Spam if an exception is thr
 
 Changelog
 ---------
----
 [1.0]
 * Initial commit of package
 
