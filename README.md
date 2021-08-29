@@ -50,6 +50,36 @@ $spamFilter->check(
 
 ```
 
+Create custom filter
+-----------------
+---
+
+The Spam-Filter supports the creation of custom filters.
+The Custom-Filters must implement the `\ThemePoint\SpamFilter\Filter\FilterInterface` with it's defined functions.
+
+Example:
+```php
+
+class EmailFilter implements \ThemePoint\SpamFilter\Filter\FilterInterface
+{
+    public function check($input): bool
+    {
+        \preg_match_all('/(([^ ].*)@(.*))/', $input, $matches, \PREG_SET_ORDER, 0);
+        
+        if (\count($matches) > 0) {
+            return true;
+        }
+        
+        return false;
+    }
+}
+```
+
+Pay attention to the following behavior of the `check` function:
+
+* Return `true` if spam is detected in input.
+* Return `false` if no spam is detected in input.
+
 Changelog
 ---------
 ---
