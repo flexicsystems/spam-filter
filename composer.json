@@ -15,9 +15,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
-    "ext-curl": "*",
-    "ext-json": "*"
+    "php": "^7.4"
   },
   "require-dev": {
     "ergebnis/php-cs-fixer-config": "^3.0.2"
