@@ -1,0 +1,35 @@
+{
+  "name": "themepoint/spam-filter",
+  "type": "library",
+  "description": "A PHP Spam-Filter",
+  "keywords": [],
+  "homepage": "https://www.themepoint.de",
+  "license": "GPL-3.0-or-later",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Hendrik Legge",
+      "email": "hendrik.legge@themepoint.de",
+      "homepage": "https://www.themepoint.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "ergebnis/php-cs-fixer-config": "^3.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "ThemePoint\\SpamFilter\\": "src"
+    },
+    "exclude-from-classmap": ["test"]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+}
