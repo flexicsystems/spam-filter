@@ -22,6 +22,11 @@ If no whitelisted pattern contained the input will rate as spam.
 ### Url Filter
 The URL Filter is build to match if the input contains url's.
 
+### Duplication Filter
+The Duplication Filter is build to match word duplications in text's.
+The `$minConsecutiveWords` defines if only words or sentences with a specific length will be matched.
+Warning: For larger text this filter performs a lot of operations.
+
 Example
 -------
 ---
