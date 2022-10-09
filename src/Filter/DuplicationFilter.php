@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @version 1.0.0
  */
 
-namespace ThemePoint\SpamFilter\Filter;
+namespace Flexic\SpamFilter\Filter;
 
 final class DuplicationFilter implements FilterInterface
 {

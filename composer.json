@@ -1,5 +1,5 @@
 {
-  "name": "themepoint/spam-filter",
+  "name": "flexic/spam-filter",
   "type": "library",
   "description": "A PHP Spam-Filter",
   "keywords": [],
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ThemePoint\\SpamFilter\\": "src"
+      "Flexic\\SpamFilter\\": "src"
     },
     "exclude-from-classmap": ["test"]
   },

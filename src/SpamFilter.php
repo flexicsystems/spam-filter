@@ -8,9 +8,9 @@ declare(strict_types=1);
  * @version 1.0.0
  */
 
-namespace ThemePoint\SpamFilter;
+namespace Flexic\SpamFilter;
 
-use ThemePoint\SpamFilter\Filter\FilterInterface;
+use Flexic\SpamFilter\Filter\FilterInterface;
 
 final class SpamFilter
 {

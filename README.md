@@ -28,12 +28,13 @@ Warning: For larger text this filter performs a lot of operations.
 
 Example
 -------
+
 ```php
-$spamFilter = new \ThemePoint\SpamFilter\SpamFilter([
-    new \ThemePoint\SpamFilter\Filter\BlacklistFilter([
+$spamFilter = new \Flexic\SpamFilter\SpamFilter([
+    new \Flexic\SpamFilter\Filter\BlacklistFilter([
         'want to buy'
     ]),
-    new \ThemePoint\SpamFilter\Filter\RegexFilter([
+    new \Flexic\SpamFilter\Filter\RegexFilter([
         '/\[\[url\=.*\]\]/'
     ])
 ]);
@@ -55,9 +56,10 @@ The Spam-Filter supports the creation of custom filters.
 The Custom-Filters must implement the `\ThemePoint\SpamFilter\Filter\FilterInterface` with it's defined functions.
 
 Example:
+
 ```php
 
-class EmailFilter implements \ThemePoint\SpamFilter\Filter\FilterInterface
+class EmailFilter implements \Flexic\SpamFilter\Filter\FilterInterface
 {
     public function check($input): bool
     {
